@@ -1,0 +1,7 @@
+.wrangler/
+.DS_Store
+*.bak
+node_modules/
+.dev.vars
+.dev.vars*
+service-account.json
