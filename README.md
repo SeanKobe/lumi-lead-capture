@@ -86,9 +86,39 @@ The Sheet and Discord steps each have their own `try/catch`:
 
 ## Screenshots
 
-Screenshots are in [`docs/screenshots`](docs/screenshots).
+### Google Sheet: every test lead, including the edge cases
 
-<!-- SCREENSHOTS: add image links here once the files are in docs/screenshots -->
+Normal leads, missing phone (`(no phone)`), blank name (`(no name)`), apostrophe and emoji, and the lead sent while the Discord link was broken ("Broken Test").
+
+![Google Sheet with test leads](docs/screenshots/01-sheet-qa-results.png)
+
+### Discord: new leads
+
+![Discord channel with new leads](docs/screenshots/02-discord-leads.png)
+
+### Discord: missing phone, blank name, apostrophe and emoji
+
+![Discord edge cases](docs/screenshots/03-discord-edge-cases.png)
+
+### Duplicate handling
+
+The same lead was sent twice. The first one went to the Sheet and Discord (21:10). The second one (21:11) was skipped.
+
+![Worker log showing Duplicate skipped](docs/screenshots/04-log-duplicate-skipped.png)
+
+### Failure handling: broken Discord link
+
+With a deliberately broken webhook URL, the lead still reached the Sheet and the error was logged.
+
+![Worker log showing Discord FAILED 404](docs/screenshots/05-log-discord-failed.png)
+
+### On a phone
+
+The site on a phone, and the Discord notification arriving on the lock screen.
+
+<img src="docs/screenshots/07-phone-site.png" alt="Lumi site on a phone" width="300">
+
+![Discord lock-screen notification](docs/screenshots/06-phone-banner.png)
 
 ## Run it yourself
 
