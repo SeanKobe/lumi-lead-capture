@@ -113,4 +113,4 @@ Set `WORKER_URL` at the top of `site/app.js` to your Worker URL.
 
 ## Notes
 
-Lumi Aesthetics is a fictional clinic made for this project. The multi-page layout was inspired by a UXDI classmate's clinic design.
+Lumi Aesthetics is a fictional clinic made for this project.
